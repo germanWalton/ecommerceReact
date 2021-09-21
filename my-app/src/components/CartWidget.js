@@ -1,11 +1,13 @@
 import {FaShoppingCart} from 'react-icons/fa';
-import ItemListContainer from './ItemListContainer';
 import '../css/cartWidget.css';
 
-function CartWidget () {
+const CartWidget = (props)=> {
+  const {itemCount} = props;
+  const itemCountTag = itemCount>0?<span className="badge bg-secondary">{itemCount}</span>:"";
   return (
+
   <div className="cartContainer"> 
-     <FaShoppingCart className="cart"/> <ItemListContainer itemCount="7"/>
+     <FaShoppingCart className="cart me-1"/>{itemCountTag}
    </div>
   );
 }

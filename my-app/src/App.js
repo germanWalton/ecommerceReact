@@ -1,6 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar';
 import {Container} from 'react-bootstrap';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   return (
@@ -9,12 +10,11 @@ function App() {
       <header>
         <NavBar/>
       </header>
-    
-     </Container>
+    </Container>
      
     <Container className="bg-secondary">
-      <div className="text-white text-center mt-5"> <h1>Pan y Bollería</h1></div>
-     </Container>
+      <ItemListContainer greeting="Panes y Bollería"/>
+    </Container>
 
 </>
 
