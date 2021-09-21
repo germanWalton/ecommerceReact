@@ -1,9 +1,13 @@
 
+
+
 const ItemListContainer = (props) => {
-  const {greeting} = props;
+  const {itemCount} = props;
+  const itemCountTag = itemCount>0?<span className="badge bg-secondary">{itemCount}</span>:"";
   
   return (
-            <h1>{greeting}</h1> )
+          itemCountTag 
+          )
 }
 
 export default ItemListContainer

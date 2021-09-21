@@ -1,14 +1,23 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
+import {Container} from 'react-bootstrap';
 
 function App() {
   return (
-    <header>
-      <NavBar/>
-      <ItemListContainer greeting="Venta de panes"/>
+    <>
+    <Container>
+      <header>
+        <NavBar/>
+      </header>
+    
+     </Container>
+     
+    <Container className="bg-secondary">
+      <div className="text-white text-center mt-5"> <h1>Pan y Bollería</h1></div>
+     </Container>
 
-    </header>
+</>
+
   );
 }
 

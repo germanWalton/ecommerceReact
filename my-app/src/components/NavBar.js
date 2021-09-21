@@ -1,7 +1,7 @@
 
 import{Navbar,Container,Nav} from 'react-bootstrap';
 import logo from '../img/logo.svg'
-import './navBar.css'
+import '../css/navBar.css'
 import CartWidget from './CartWidget';
 
 function NavBar() {
@@ -14,10 +14,10 @@ function NavBar() {
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav" className="text-center">
       <Nav className="ms-auto">
-        <Nav.Link href="#home">Inicio</Nav.Link>
-        <Nav.Link href="#link">Productos</Nav.Link>
-        <Nav.Link href="#link">Comprar</Nav.Link>
-        <Nav.Link href="#link" className="active"> <CartWidget numero="2"/></Nav.Link>
+        <Nav.Link href="#home" className="me-3">Inicio </Nav.Link>
+        <Nav.Link href="#link" className="me-3">Productos</Nav.Link>
+        <Nav.Link href="#link" className="me-3">Comprar</Nav.Link>
+        <Nav.Link href="#link" className="active"> <CartWidget/></Nav.Link>
 
        
       </Nav>

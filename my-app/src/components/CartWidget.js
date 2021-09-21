@@ -1,12 +1,11 @@
 import {FaShoppingCart} from 'react-icons/fa';
-import Badge from 'react-bootstrap/Badge'
+import ItemListContainer from './ItemListContainer';
+import '../css/cartWidget.css';
 
-const CartWidget = (props) => {
-const {numero} = props;
+function CartWidget () {
   return (
-  <div className="bg-primary"> 
-    <Badge bg="warning" text="dark">{numero}</Badge>
-     <FaShoppingCart/>
+  <div className="cartContainer"> 
+     <FaShoppingCart className="cart"/> <ItemListContainer itemCount="7"/>
    </div>
   );
 }
