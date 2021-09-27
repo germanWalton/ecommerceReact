@@ -10,14 +10,14 @@ function NavBar() {
   
 <Navbar expand="lg">
   <Container>
-    <Navbar.Brand href="#home"><img className="logo" src={logo} width="140"/> </Navbar.Brand>
+    <Navbar.Brand href="#home"><img className="logo" src={logo} width="140" alt="logo"/> </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav" className="text-center">
       <Nav className="ms-auto">
         <Nav.Link href="#home" className="me-3">Inicio </Nav.Link>
         <Nav.Link href="#link" className="me-3">Productos</Nav.Link>
         <Nav.Link href="#link" className="me-3">Comprar</Nav.Link>
-        <Nav.Link href="#link" className="active"> <CartWidget itemCount="7"/></Nav.Link>
+        <Nav.Link href="#link" className="active"> <CartWidget itemCount="3"/></Nav.Link>
 
        
       </Nav>
