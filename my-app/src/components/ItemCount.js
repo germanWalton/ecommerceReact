@@ -15,8 +15,8 @@ const ItemCount = ({stock,initial})=>  {
 
   return (
     <>
-        <div className="d-flex justify-content-center mt-5">
-        <div className="count-container">
+        <div className="d-flex justify-content-center mt-2">
+        <div className="count-container p-3">
             <div className="d-flex bg-white justify-content-between rounded">
                <Button type="button" variant="outline-light text-dark" onClick={substract}>-</Button> 
                 <h4 className="m-0 p-1">{counter}</h4>
