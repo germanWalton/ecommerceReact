@@ -1,24 +1,25 @@
-import React from 'react'
-import './App.css';
-import NavBar from './components/NavBar';
-import {Container} from 'react-bootstrap';
-import ItemListContainer from './components/ItemListContainer';
-
+import React from "react";
+import "./App.css";
+import NavBar from "./components/NavBar";
+import { Container, Image } from "react-bootstrap";
+import ItemListContainer from "./components/ItemListContainer";
 function App() {
   return (
     <>
-    <Container>
       <header>
-        <NavBar/>
+        <Container>
+          <NavBar />
+        </Container>
       </header>
-    </Container>
-     
-    <Container className="bg-secondary">
-      <ItemListContainer greeting="Panes y Bollería"/>
-    </Container>
 
-</>
-
+      <Container className="main-container">
+        <Image
+          src="https://bsstatic2.mrjack.es/wp-content/uploads/2015/10/pan-fresas-chile-cabecera.jpg"
+          className="w-100 mt-5"
+        ></Image>
+        <ItemListContainer greeting="Panes y Bollería" />
+      </Container>
+    </>
   );
 }
 

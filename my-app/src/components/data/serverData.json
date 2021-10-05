@@ -1,6 +1,6 @@
 [
-  {"id":0,"title":"Pan de campo","price":450,"description":"Texto provisorio","stock":20,"imageUrl":"https://i.pinimg.com/564x/66/23/3c/66233c98cdc8bcc20f392f50c78fefa0.jpg"},
-  {"id":1,"title":"Pan Grian","price":670,"description":"Texto provisorio","stock":5,"imageUrl":"https://i.pinimg.com/564x/3a/55/81/3a5581f10d647b819afea02314dfd886.jpg"},
-  {"id":2,"title":"Pan Challah","price":650,"description":"Texto provisorio","stock":10,"imageUrl":"https:////i.pinimg.com/564x/c4/f3/ec/c4f3ece91cd808b7f76b5e059516f235.jpg"},
-  {"id":3,"title":"Baguette","price":150,"description":"Texto provisorio","stock":30,"imageUrl":"https://i.pinimg.com/564x/89/68/03/896803c5a17a78723394459811d2bfef.jpg"}
+  {"id":0,"title":"Pan de campo","price":450,"description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.","stock":20,"imageUrl":"https://i.pinimg.com/564x/66/23/3c/66233c98cdc8bcc20f392f50c78fefa0.jpg"},
+  {"id":1,"title":"Pan Grian","price":670,"description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.","stock":5,"imageUrl":"https://i.pinimg.com/564x/3a/55/81/3a5581f10d647b819afea02314dfd886.jpg"},
+  {"id":2,"title":"Pan Challah","price":650,"description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.","stock":10,"imageUrl":"https:////i.pinimg.com/564x/c4/f3/ec/c4f3ece91cd808b7f76b5e059516f235.jpg"},
+  {"id":3,"title":"Baguette","price":150,"description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.","stock":30,"imageUrl":"https://i.pinimg.com/564x/89/68/03/896803c5a17a78723394459811d2bfef.jpg"}
 ]
