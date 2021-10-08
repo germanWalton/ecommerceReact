@@ -4,12 +4,12 @@ import ItemCount from "./ItemCount";
 
 
 const ItemDetail = (item) => {
-  const { title, price, description, stock, imageUrl } = item.item;
+  const {title, price, description, stock, imageUrl } = item.item;
  
 
  
   return (
-    <>
+    <> 
       <Modal.Header closeButton>
         <Modal.Title> {title}</Modal.Title>
       </Modal.Header>

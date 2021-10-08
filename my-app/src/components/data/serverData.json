@@ -1,6 +1,11 @@
 [
-  {"id":0,"title":"Pan de campo","price":450,"description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.","stock":20,"imageUrl":"https://i.pinimg.com/564x/66/23/3c/66233c98cdc8bcc20f392f50c78fefa0.jpg"},
-  {"id":1,"title":"Pan Grian","price":670,"description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.","stock":5,"imageUrl":"https://i.pinimg.com/564x/3a/55/81/3a5581f10d647b819afea02314dfd886.jpg"},
-  {"id":2,"title":"Pan Challah","price":650,"description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.","stock":10,"imageUrl":"https:////i.pinimg.com/564x/c4/f3/ec/c4f3ece91cd808b7f76b5e059516f235.jpg"},
-  {"id":3,"title":"Baguette","price":150,"description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.","stock":30,"imageUrl":"https://i.pinimg.com/564x/89/68/03/896803c5a17a78723394459811d2bfef.jpg"}
+  {"id":0,"title":"Pan de campo","price":450,"description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.","stock":20,"imageUrl":"https://i.pinimg.com/564x/66/23/3c/66233c98cdc8bcc20f392f50c78fefa0.jpg","category":"panes"},
+  {"id":1,"title":"Pan Grian","price":670,"description":"Lorem ipsum dolor sit amet consectetur adipisicing elit.","stock":5,"imageUrl":"https://i.pinimg.com/564x/3a/55/81/3a5581f10d647b819afea02314dfd886.jpg","category":"panes"},
+  {"id":2,"title":"Pan Challah","price":650,"description":"Pan challah con masa madre, pan de origen judío elaborado con 5 cabos y una decoración superior en forma de collar de perlas","stock":10,"imageUrl":"https:////i.pinimg.com/564x/c4/f3/ec/c4f3ece91cd808b7f76b5e059516f235.jpg","category":"panes"},
+  {"id":3,"title":"Baguette","price":150,"description":"Barras de pan","stock":30,"imageUrl":"https://i.pinimg.com/564x/89/68/03/896803c5a17a78723394459811d2bfef.jpg","category":"panes"},
+  {"id":4,"title":"Kürtőskalács","price":250,"description":"Kürtőskalács, Trdlo o Trdelnik, dulce tradicional húngaro con origen en Transilvania","stock":10,"imageUrl":"https://i.pinimg.com/564x/e2/47/4f/e2474feda612397c645cc9803fc55b68.jpg","category":"bolleria"},
+  {"id":5,"title":"Carbayones de Oviedo","price":290,"description":"Carbayones de Oviedo, dulce tradicional de Asturias elaborado con hojaldre, crema de almendras y una cobertura de yema y glaseado de claras","stock":10,"imageUrl":"https://i.pinimg.com/564x/a4/79/35/a4793596011d4daf9d68a06fbafc715a.jpg","category":"bolleria"},
+  {"id":6,"title":"La Religieuse Briochée","price":380,"description":"La Religieuse Briochée, brioche cubierto de un craquelin de chocolate, decorado con una galleta sablée de chocolate, cremoso de chocolate y pétalos.","stock":10,"imageUrl":"https://i.pinimg.com/564x/88/02/6e/88026eb1ba0bb1947ae4728c47d63aff.jpg","category":"bolleria"},
+  {"id":7,"title":"Brioche Nanterre","price":680,"description":"Brioche Nanterre de Cabrales y membrillo. Brioche enriquecido formado como el tradicional Nanterre, de miga muy suave y sabor espectacular.","stock":10,"imageUrl":"https://i.pinimg.com/564x/bd/a3/52/bda35223a327e7715d7c7d430a81537c.jpg","category":"bolleria"}
+
 ]

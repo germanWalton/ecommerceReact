@@ -5,7 +5,7 @@ import { Spinner } from "react-bootstrap";
 function ItemList({ items }) {
   return (
     <>
-      {items ? (
+      {items.length > 0 ? (
         items.map((product, id) => <Item key={id} item={product} />)
       ) : (
         <Spinner animation="border" variant="primary" />
