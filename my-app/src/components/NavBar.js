@@ -11,7 +11,7 @@ function NavBar() {
   
 <Navbar expand="lg">
   <Container>
-    <Navbar.Brand href="/"><img className="logo" src={logo} width="140" alt="logo"/> </Navbar.Brand>
+    <Navbar.Brand><Link to="/"><img className="logo" src={logo} width="140" alt="logo"/></Link> </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav" className="text-center">
       <Nav className="ms-auto">
