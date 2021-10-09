@@ -3,7 +3,6 @@ import ItemList from "./ItemList";
 import serverData from "./data/serverData.json";
 import { useParams } from "react-router-dom";
 
-
 function ItemListContainer() {
   const [product, setProduct] = useState([]);
   const { category: productCategory } = useParams();
@@ -33,7 +32,7 @@ function ItemListContainer() {
     <>
       {
         <div className="text-white text-center mt-5 d-flex justify-content-center row">
-          <ItemList items={product} />
+         <ItemList items={product} />
         </div>
       }
     </>
