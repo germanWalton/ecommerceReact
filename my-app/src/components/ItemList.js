@@ -8,7 +8,7 @@ function ItemList({ items }) {
       {items.length > 0 ? (
         items.map((product, id) => <Item key={id} item={product} />)
       ) : (
-        <Spinner animation="border" variant="primary" />
+        <Spinner animation="border" variant="secondary" />
       )}
     </>
   );

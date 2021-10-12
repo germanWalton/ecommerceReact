@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import { Container, Image } from "react-bootstrap";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
+import Cart from "./components/Cart";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -32,6 +33,9 @@ function App() {
         </Route>
         <Route exact path="/item/:title">
           <ItemDetailContainer />
+        </Route>
+        <Route>
+          <Cart exact path="/cart" />
         </Route>
       </Switch>
     </Router>
