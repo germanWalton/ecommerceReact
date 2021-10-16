@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import "../css/itemCount.css";
 
-const ItemCount = ({ stock, initial }) => {
+const ItemCount = ({ stock, initial, onAdd }) => {
   const [counter, setCounter] = useState(initial);
 
   const add = () => {
@@ -19,15 +19,17 @@ const ItemCount = ({ stock, initial }) => {
       : console.log("Ha superado el numero minimo");
   };
 
-  const [addToCart, setAddToCart] = useState(true);
+  // const [addToCart, setAddToCart] = useState(true);
 
-  const onAdd = () => {
-    setAddToCart();
-    console.log(`Se agregaron ${counter} productos al carrito`);
-  };
+  // const onAdd = () => {
+  //   setAddToCart();
+  //   console.log(`Se agregaron ${counter} productos al carrito`);
+  //   const remanente = stock - counter
+  //   console.log(`Quedan ${remanente} productos`)
+  // };
   return (
     <>
-      {addToCart ? (
+     
         <div className="d-flex justify-content-center mt-2">
           <div className="count-container p-3">
             <div className="d-flex bg-light justify-content-between rounded">
@@ -50,7 +52,7 @@ const ItemCount = ({ stock, initial }) => {
 
             {counter > 0 ? (
               <Button
-                onClick={onAdd}
+                onClick={() => onAdd(counter)}
                 type="button"
                 className="container-fluid mt-2"
                 variant="outline-dark"
@@ -62,13 +64,13 @@ const ItemCount = ({ stock, initial }) => {
             )}
           </div>
         </div>
-      ) : (
+      
         <div>
           <Link to="/cart" className="btn btn-dark m-3">
             Finalizar compra
           </Link>
         </div>
-      )}
+      
     </>
   );
 };

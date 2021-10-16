@@ -4,14 +4,16 @@ import "../css/navBar.css";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
 
+ 
 function NavBar() {
+
   return (
     <Navbar expand="lg">
       <Container>
         <Navbar.Brand>
           <Link to="/">
             <img className="logo" src={logo} width="140" alt="logo" />
-          </Link>{" "}
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="text-center">
@@ -25,10 +27,9 @@ function NavBar() {
             <Link to="/category/bolleria" className="me-3 nav-link">
               Bolleria
             </Link>
-            <Nav.Link href="#link" className="active">
-              {" "}
-              <CartWidget itemCount="3" />
-            </Nav.Link>
+            <Link to="/cart" className="nav-link active">
+              <CartWidget/>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -2,9 +2,16 @@ import React from "react";
 import { Card, Container, Spinner } from "react-bootstrap";
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
+import { CartContextUse } from "../context/CartContext";
 
 const ItemDetail = (item) => {
-  const { title, imageUrl, description, price, stock } = item.item;
+  const {title, imageUrl, description, price, stock } = item.item;
+
+  //Context Api
+  const { addItem } = CartContextUse();
+  const onAdd = (qty) => {
+    addItem(item.item, qty);
+  };
 
   return (
     <Container className="d-flex justify-content-center">
@@ -17,7 +24,7 @@ const ItemDetail = (item) => {
             </Card.Title>
             <Card.Text>{description}</Card.Text>
             <h5>${price}</h5>
-            <ItemCount stock={stock} initial={0} />
+            <ItemCount stock={stock} initial={0} onAdd={onAdd} />
             <Link className="btn btn-secondary" to="/">
               Volver
             </Link>
