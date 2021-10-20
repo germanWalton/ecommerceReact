@@ -3,9 +3,11 @@ import logo from "../img/logo.svg";
 import "../css/navBar.css";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
+import { CartContextUse } from "../context/CartContext"
 
  
 function NavBar() {
+  const { cartProducts } = CartContextUse();
 
   return (
     <Navbar expand="lg">

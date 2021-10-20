@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import { CartContextUse } from "../context/CartContext";
 
 const ItemDetail = (item) => {
-  const {title, imageUrl, description, price, stock } = item.item;
+  const {  title, imageUrl, description, price, stock } = item.item;
 
   //Context Api
-  const { addItem } = CartContextUse();
+  const { addItem, cart } = CartContextUse();
   const onAdd = (qty) => {
     addItem(item.item, qty);
   };
@@ -25,6 +25,15 @@ const ItemDetail = (item) => {
             <Card.Text>{description}</Card.Text>
             <h5>${price}</h5>
             <ItemCount stock={stock} initial={0} onAdd={onAdd} />
+            {cart.length > 0 ? (
+              <div>
+                <Link to="/cart" className="btn btn-dark m-3">
+                  Finalizar compra
+                </Link>
+              </div>
+            ) : (
+              console.log("Para finalizar compra primero agregar algo")
+            )}
             <Link className="btn btn-secondary" to="/">
               Volver
             </Link>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
 
 import "../css/itemCount.css";
 
@@ -19,58 +18,42 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       : console.log("Ha superado el numero minimo");
   };
 
-  // const [addToCart, setAddToCart] = useState(true);
-
-  // const onAdd = () => {
-  //   setAddToCart();
-  //   console.log(`Se agregaron ${counter} productos al carrito`);
-  //   const remanente = stock - counter
-  //   console.log(`Quedan ${remanente} productos`)
-  // };
   return (
     <>
-     
-        <div className="d-flex justify-content-center mt-2">
-          <div className="count-container p-3">
-            <div className="d-flex bg-light justify-content-between rounded">
-              <Button
-                type="button"
-                variant="outline-light text-dark"
-                onClick={substract}
-              >
-                -
-              </Button>
-              <h4 className="m-0 p-1">{counter}</h4>
-              <Button
-                type="button"
-                variant="outline-light text-dark"
-                onClick={add}
-              >
-                +
-              </Button>
-            </div>
-
-            {counter > 0 ? (
-              <Button
-                onClick={() => onAdd(counter)}
-                type="button"
-                className="container-fluid mt-2"
-                variant="outline-dark"
-              >
-                Agregar al carrito
-              </Button>
-            ) : (
-              console.log("Nada para agregar")
-            )}
+      <div className="d-flex justify-content-center mt-2">
+        <div className="count-container p-3">
+          <div className="d-flex bg-light justify-content-between rounded">
+            <Button
+              type="button"
+              variant="outline-light text-dark"
+              onClick={substract}
+            >
+              -
+            </Button>
+            <h4 className="m-0 p-1">{counter}</h4>
+            <Button
+              type="button"
+              variant="outline-light text-dark"
+              onClick={add}
+            >
+              +
+            </Button>
           </div>
+
+          {counter > 0 ? (
+            <Button
+              onClick={() => onAdd(counter)}
+              type="button"
+              className="container-fluid mt-2"
+              variant="outline-dark"
+            >
+              Agregar al carrito
+            </Button>
+          ) : (
+            console.log("Nada para agregar")
+          )}
         </div>
-      
-        <div>
-          <Link to="/cart" className="btn btn-dark m-3">
-            Finalizar compra
-          </Link>
-        </div>
-      
+      </div>
     </>
   );
 };

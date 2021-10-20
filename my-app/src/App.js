@@ -36,8 +36,8 @@ function App() {
           <Route exact path="/item/:title">
             <ItemDetailContainer />
           </Route>
-          <Route>
-            <Cart exact path="/cart" />
+          <Route exact path="/cart">
+            <Cart/>
           </Route>
         </Switch>
       </Router>
