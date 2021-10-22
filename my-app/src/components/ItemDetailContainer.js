@@ -1,24 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-import serverData from "./data/serverData.json";
+import { getFirestore } from "../firebase";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);
   const { title: itemTitle } = useParams();
 
   useEffect(() => {
-    const data = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        const findProduct = serverData.find((item) => item.title === itemTitle);
-        resolve(findProduct);
-        reject("Hubo un error en la comunicación");
-      }, 2000);
-    });
+    const getDetail = async () => {
+      const { docs } = await getFirestore().collection("serverData").get();
+       const newArray = docs.map((item) => ({ id: item.id, ...item.data() }));
+      const findProduct = newArray.find((item) => item.title === itemTitle);
+      setProduct(findProduct);
+    };
 
-    data.then((response) => {
-      setProduct(response);
-    });
+    getDetail();
   }, [itemTitle]);
 
   return <ItemDetail item={product} />;
