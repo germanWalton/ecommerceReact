@@ -28,7 +28,7 @@ const ItemDetail = (item) => {
             {cart.length > 0 ? (
               <div>
                 <Link to="/cart" className="btn btn-dark m-3">
-                  Finalizar compra
+                  Ir al carrito
                 </Link>
               </div>
             ) : (

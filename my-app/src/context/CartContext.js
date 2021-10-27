@@ -47,6 +47,8 @@ export default function CartContextProvider({ children }) {
  const totalPrice = cart.reduce((acc, product) => acc += ((product.item.price)*(product.quantity)), 0)
   parseInt(totalPrice)
   
+
+  
   
   console.log("Carrito", cart);
 

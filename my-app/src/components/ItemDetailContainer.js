@@ -9,10 +9,19 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     const getDetail = async () => {
-      const { docs } = await getFirestore().collection("serverData").get();
-       const newArray = docs.map((item) => ({ id: item.id, ...item.data() }));
-      const findProduct = newArray.find((item) => item.title === itemTitle);
-      setProduct(findProduct);
+      try {
+        const { docs } = await getFirestore().collection("serverData").get();
+        const newArray = docs.map((item) => ({
+          id: item.id,
+          ...item.data(),
+        }));
+        const findProduct =  newArray.find(
+          (item) => item.title === itemTitle
+        );
+        setProduct(findProduct);
+      } catch (e) {
+        console.log(e);
+      }
     };
 
     getDetail();

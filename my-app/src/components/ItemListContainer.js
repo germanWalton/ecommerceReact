@@ -9,17 +9,20 @@ function ItemListContainer() {
 
   useEffect(() => {
     const getProducts = async () => {
-      const { docs } = await getFirestore().collection("serverData").get();
-      const newArray = docs.map((item) => ({ id: item.id, ...item.data() }));
 
-      if (productCategory) {
-        const filterCategory = newArray.filter(
-          (item) => item.category === productCategory
-        );
-        setProduct(filterCategory);
-      } else {
-        setProduct(newArray);
-      }
+      try {
+        const { docs } = await getFirestore().collection("serverData").get();
+        const newArray = await docs.map((item) => ({ id: item.id, ...item.data() }));
+
+        if (productCategory) {
+          const filterCategory = await newArray.filter(
+            (item) => item.category === productCategory
+          );
+          setProduct(filterCategory);
+        } else {
+          setProduct(newArray);
+        }
+      } catch (e) { console.log(e) }
     };
     getProducts();
   }, [productCategory]);
