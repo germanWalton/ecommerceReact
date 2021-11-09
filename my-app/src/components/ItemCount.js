@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
-
+import swal from "sweetalert";
 import "../css/itemCount.css";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
@@ -9,7 +9,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   const add = () => {
     counter < stock
       ? setCounter(counter + 1)
-      : alert("No hay mas stock disponible");
+      : swal("No hay mas stock disponible");
   };
 
   const substract = () => {

@@ -1,11 +1,12 @@
-import React from "react";
+import React, {useState}  from "react";
 import { Button, Container, ListGroup } from "react-bootstrap";
 import { CartContextUse } from "../context/CartContext";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { clear, removeItem, cart, totalPrice, addItem } = CartContextUse();
-
+  const { clear, removeItem, cart, totalPrice, addQuantity, reduceQuantity } = CartContextUse();
+  
+  console.log("hola")
   return (
     <Container>
       <div className="d-flex align-items-center flex-column">
@@ -26,13 +27,14 @@ const Cart = () => {
                 <ListGroup.Item> {element.item.description}</ListGroup.Item>
                 <ListGroup.Item>
                   <div className="d-flex">
-                    <Button variant="secondary">-</Button>
+                    <Button variant="secondary" onClick={() => reduceQuantity(element) }>-</Button>
+                    
                     <input
                       className="text-center"
                       type="text"
                       value={element.quantity}
                     ></input>
-                    <Button variant="secondary">+</Button>
+                    <Button variant="secondary" onClick={() =>  addQuantity(element) }>+</Button>
                   </div>{" "}
                 </ListGroup.Item>
                 <Button

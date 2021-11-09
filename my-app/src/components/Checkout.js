@@ -15,15 +15,10 @@ const Checkout = () => {
 
   const setOrders = async (e) => {
     e.preventDefault();
-    if (!name.trim()) {
-      setError("El campo nombre esta vacio");
-    }
-    if (!phone.trim()) {
-      setError("El campo telefono esta vacio");
-    }
-    if (!email.trim()) {
-      setError("El campo email esta vacio");
-    } else {
+    if ((!name.trim()) || (!phone.trim()) || (!email.trim())) {
+      setError("Complete todos los campos");
+    } 
+   else {
       const order = {
         buyer: {
           name: name,
@@ -48,7 +43,9 @@ const Checkout = () => {
           .then((resultado) => {
             swal(`Su numero de orden es ${resultado.id} 
          Gracias por su compra`);
-          });
+            setTimeout(() => { setCart([]) },3000)
+          })
+        
       } catch (e) {
         console.log(e);
       }
@@ -56,7 +53,7 @@ const Checkout = () => {
       setPhone("");
       setName("");
       setEmail("");
-      setCart([]);
+      
     }
   };
 

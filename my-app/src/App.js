@@ -13,7 +13,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    // <FirebaseContextProvider>
       <CartContextProvider>
         <Router>
           <header>
@@ -22,7 +21,8 @@ function App() {
             </Container>
           </header>
           <Switch>
-            <Route exact path="/">
+          <Route exact path="/">
+            <main>
               <Container className="main-container">
                 <Image
                   src="https://bsstatic2.mrjack.es/wp-content/uploads/2015/10/pan-fresas-chile-cabecera.jpg"
@@ -30,6 +30,7 @@ function App() {
                 ></Image>
                 <ItemListContainer />
               </Container>
+            </main>
             </Route>
             <Route exact path="/category/:category">
               <Container>
@@ -46,9 +47,9 @@ function App() {
             <Checkout/>
           </Route>
           </Switch>
-        </Router>
+      </Router>
+      <footer></footer>
       </CartContextProvider>
-    // </FirebaseContextProvider>
   );
 }
 

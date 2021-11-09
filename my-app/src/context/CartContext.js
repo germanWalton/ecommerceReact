@@ -47,13 +47,24 @@ export default function CartContextProvider({ children }) {
  const totalPrice = cart.reduce((acc, product) => acc += ((product.item.price)*(product.quantity)), 0)
   parseInt(totalPrice)
   
+//addQuantity agrega cantidad de un producto
+  const addQuantity = (element) => {
+    const index = cart.findIndex((product) => element.item.id === product.item.id )
+    cart[index].quantity < cart[index].item.stock ? cart[index].quantity += 1 : console.log('No hay mas stock')
+    setCart([...cart]);
+  }
 
+  //reduceQuantity quita cantidad de un producto
+  const reduceQuantity = (element) => {
+    const index = cart.findIndex((product) => element.item.id === product.item.id )
+    cart[index].quantity > 0 ? cart[index].quantity -= 1 : console.log('Ha superado el numero minimo')
+    setCart([...cart]);
+  }
   
   
-  console.log("Carrito", cart);
 
   return (
-    <CartContext.Provider value={{ cart, addItem, clear, removeItem, cartProducts, totalPrice, isInCart, setCart }}>
+    <CartContext.Provider value={{ cart, addItem, clear, removeItem, cartProducts, totalPrice, isInCart, setCart,addQuantity, reduceQuantity }}>
       {children}
     </CartContext.Provider>
   );
