@@ -6,21 +6,21 @@ import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Cart from "./components/Cart";
 import CartContextProvider from "./context/CartContext";
-import Checkout from './components/Checkout'
-// import FirebaseContextProvider from "./context/FirebaseContext";
+import Checkout from "./components/Checkout";
+import Footer from "./components/Footer";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-      <CartContextProvider>
-        <Router>
-          <header>
-            <Container>
-              <NavBar />
-            </Container>
-          </header>
-          <Switch>
+    <CartContextProvider>
+      <Router>
+        <header>
+          <Container>
+            <NavBar/>
+          </Container>
+        </header>
+        <Switch>
           <Route exact path="/">
             <main>
               <Container className="main-container">
@@ -28,28 +28,28 @@ function App() {
                   src="https://bsstatic2.mrjack.es/wp-content/uploads/2015/10/pan-fresas-chile-cabecera.jpg"
                   className="w-100 mt-5"
                 ></Image>
-                <ItemListContainer />
+                <ItemListContainer/>
               </Container>
             </main>
-            </Route>
-            <Route exact path="/category/:category">
-              <Container>
-                <ItemListContainer />
-              </Container>
-            </Route>
-            <Route exact path="/item/:title">
-              <ItemDetailContainer />
-            </Route>
-            <Route exact path="/cart">
-              <Cart />
+          </Route>
+          <Route exact path="/category/:category">
+            <Container>
+              <ItemListContainer/>
+            </Container>
+          </Route>
+          <Route exact path="/item/:title">
+            <ItemDetailContainer/>
+          </Route>
+          <Route exact path="/cart">
+            <Cart/>
           </Route>
           <Route exact path="/cart/checkout">
             <Checkout/>
           </Route>
-          </Switch>
+        </Switch>
+        <Footer/>
       </Router>
-      <footer></footer>
-      </CartContextProvider>
+    </CartContextProvider>
   );
 }
 

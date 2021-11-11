@@ -1,12 +1,12 @@
-import React, {useState}  from "react";
+import React from "react";
 import { Button, Container, ListGroup } from "react-bootstrap";
 import { CartContextUse } from "../context/CartContext";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { clear, removeItem, cart, totalPrice, addQuantity, reduceQuantity } = CartContextUse();
-  
-  console.log("hola")
+  const { clear, removeItem, cart, totalPrice, addQuantity, reduceQuantity } =
+    CartContextUse();
+
   return (
     <Container>
       <div className="d-flex align-items-center flex-column">
@@ -24,18 +24,28 @@ const Cart = () => {
                 </ListGroup.Item>
                 <ListGroup.Item>{element.item.title}</ListGroup.Item>
                 <ListGroup.Item>${element.item.price}</ListGroup.Item>
-                <ListGroup.Item> {element.item.description}</ListGroup.Item>
+                <ListGroup.Item>{element.item.description}</ListGroup.Item>
                 <ListGroup.Item>
                   <div className="d-flex">
-                    <Button variant="secondary" onClick={() => reduceQuantity(element) }>-</Button>
-                    
+                    <Button
+                      variant="secondary"
+                      onClick={() => reduceQuantity(element)}
+                    >
+                      -
+                    </Button>
+
                     <input
                       className="text-center"
                       type="text"
                       value={element.quantity}
                     ></input>
-                    <Button variant="secondary" onClick={() =>  addQuantity(element) }>+</Button>
-                  </div>{" "}
+                    <Button
+                      variant="secondary"
+                      onClick={() => addQuantity(element)}
+                    >
+                      +
+                    </Button>
+                  </div>
                 </ListGroup.Item>
                 <Button
                   variant="secondary"
@@ -54,7 +64,12 @@ const Cart = () => {
             <h5 className="mt-5 align-self-end text-center">
               Total a pagar: ${totalPrice}
             </h5>
-            <Link to="/cart/checkout" className="btn btn-outline-secondary mt-5 align-self-end">Finalizar compra</Link>
+            <Link
+              to="/cart/checkout"
+              className="btn btn-outline-secondary mt-5 align-self-end"
+            >
+              Finalizar compra
+            </Link>
             <Button onClick={clear} className="w-25 mt-5" variant="secondary">
               Vaciar carrito
             </Button>{" "}

@@ -1,20 +1,15 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../img/logo.svg";
-import "../css/navBar.css";
 import CartWidget from "./CartWidget";
 import { Link } from "react-router-dom";
-import { CartContextUse } from "../context/CartContext"
 
- 
 function NavBar() {
-  const { cartProducts } = CartContextUse();
-
   return (
     <Navbar expand="lg">
-      <Container>
+      <Container className="p-3">
         <Navbar.Brand>
           <Link to="/">
-            <img className="logo" src={logo} width="140" alt="logo" />
+            <img style={{filter:"invert()"}} src={logo} width="140" alt="logo" />
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -30,7 +25,7 @@ function NavBar() {
               Bolleria
             </Link>
             <Link to="/cart" className="nav-link active">
-              <CartWidget/>
+              <CartWidget />
             </Link>
           </Nav>
         </Navbar.Collapse>

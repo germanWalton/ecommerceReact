@@ -15,9 +15,7 @@ const ItemDetailContainer = () => {
           id: item.id,
           ...item.data(),
         }));
-        const findProduct =  newArray.find(
-          (item) => item.title === itemTitle
-        );
+        const findProduct = newArray.find((item) => item.title === itemTitle);
         setProduct(findProduct);
       } catch (e) {
         console.log(e);

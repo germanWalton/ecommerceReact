@@ -3,7 +3,7 @@ import { Card, Badge } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Item(item) {
-  const {  title, stock, imageUrl } = item.item;
+  const { title, stock, imageUrl } = item.item;
 
   return (
     <Card style={{ width: "18rem" }} className="text-center me-4 mt-3">

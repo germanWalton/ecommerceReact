@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { CartContextUse } from "../context/CartContext";
 
 const ItemDetail = (item) => {
-  const {  title, imageUrl, description, price, stock } = item.item;
+  const { title, imageUrl, description, price, stock } = item.item;
 
   //Context Api
   const { addItem, cart } = CartContextUse();
@@ -14,7 +14,7 @@ const ItemDetail = (item) => {
   };
 
   return (
-    <Container className="d-flex justify-content-center">
+    <Container className="d-flex justify-content-center"  style={{paddingTop:100}}>
       {(title, imageUrl, description, price, stock) ? (
         <Card style={{ width: "18rem" }} className="text-center me-4 mt-3">
           <Card.Img variant="top" className="mt-3 ps-3 pe-3" src={imageUrl} />

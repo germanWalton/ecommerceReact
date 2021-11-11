@@ -9,10 +9,12 @@ function ItemListContainer() {
 
   useEffect(() => {
     const getProducts = async () => {
-
       try {
         const { docs } = await getFirestore().collection("serverData").get();
-        const newArray = await docs.map((item) => ({ id: item.id, ...item.data() }));
+        const newArray = await docs.map((item) => ({
+          id: item.id,
+          ...item.data(),
+        }));
 
         if (productCategory) {
           const filterCategory = await newArray.filter(
@@ -22,7 +24,9 @@ function ItemListContainer() {
         } else {
           setProduct(newArray);
         }
-      } catch (e) { console.log(e) }
+      } catch (e) {
+        console.log(e);
+      }
     };
     getProducts();
   }, [productCategory]);
@@ -30,7 +34,7 @@ function ItemListContainer() {
   return (
     <>
       {
-        <div className="text-white text-center mt-5 d-flex justify-content-center row">
+        <div className="text-white text-center mt-5 d-flex justify-content-center row"  style={{paddingTop:70}}>
           <ItemList items={product} />
         </div>
       }

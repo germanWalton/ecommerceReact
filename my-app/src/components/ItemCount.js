@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import swal from "sweetalert";
-import "../css/itemCount.css";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [counter, setCounter] = useState(initial);
@@ -21,7 +20,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   return (
     <>
       <div className="d-flex justify-content-center mt-2">
-        <div className="count-container p-3">
+        <div style={{ width:200}} className="p-3">
           <div className="d-flex bg-light justify-content-between rounded">
             <Button
               type="button"

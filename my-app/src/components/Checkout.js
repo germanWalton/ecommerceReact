@@ -15,10 +15,9 @@ const Checkout = () => {
 
   const setOrders = async (e) => {
     e.preventDefault();
-    if ((!name.trim()) || (!phone.trim()) || (!email.trim())) {
+    if (!name.trim() || !phone.trim() || !email.trim()) {
       setError("Complete todos los campos");
-    } 
-   else {
+    } else {
       const order = {
         buyer: {
           name: name,
@@ -43,9 +42,10 @@ const Checkout = () => {
           .then((resultado) => {
             swal(`Su numero de orden es ${resultado.id} 
          Gracias por su compra`);
-            setTimeout(() => { setCart([]) },3000)
-          })
-        
+            setTimeout(() => {
+              setCart([]);
+            }, 3000);
+          });
       } catch (e) {
         console.log(e);
       }
@@ -53,7 +53,6 @@ const Checkout = () => {
       setPhone("");
       setName("");
       setEmail("");
-      
     }
   };
 

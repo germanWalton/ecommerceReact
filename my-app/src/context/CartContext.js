@@ -57,7 +57,7 @@ export default function CartContextProvider({ children }) {
   //reduceQuantity quita cantidad de un producto
   const reduceQuantity = (element) => {
     const index = cart.findIndex((product) => element.item.id === product.item.id )
-    cart[index].quantity > 0 ? cart[index].quantity -= 1 : console.log('Ha superado el numero minimo')
+    cart[index].quantity > 1 ? cart[index].quantity -= 1 : console.log('Ha superado el numero minimo')
     setCart([...cart]);
   }
   
